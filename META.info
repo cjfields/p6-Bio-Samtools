@@ -1,4 +1,5 @@
 i# include the following section in your META.info:
 "resources" : [
-    "libbam.a"
+    "libbam.a",
+    "libhts.a"
 ]

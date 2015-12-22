@@ -1,8 +1,10 @@
-all: %DESTDIR%/libbam.a
+all: %DESTDIR%/libbam.a %DESTDIR%/libhts.a
 
-clean: 
+clean:
 	cd samtools; make clean
 
-%DESTDIR%/libbam.a: 
-	cd samtools; make; cp libbam.a %DESTDIR%/libbam.a
+%DESTDIR%/libbam.a:
+	cd samtools; make; cp libbam.a ../../%DESTDIR%/libbam.a
 
+%DESTDIR%/libhts.a:
+	cd htslib; cp libhts.a ../../%DESTDIR%/libhts.a

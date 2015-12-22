@@ -2,7 +2,9 @@
 use v6;
 use LibraryMake;
 
-my $dir = '../../lib';
-my %vars = get-vars($dir);
+# this is relative to the path in the makefile
+my $destdir = 'resources';
+my %vars = get-vars($destdir);
+mkdir $destdir;
 process-makefile('./src', %vars);
-make("./src", $dir);
+make("./src", $destdir);

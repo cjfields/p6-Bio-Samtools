@@ -10,5 +10,5 @@ class Bio::Samtools {
     method install-library {
         return $LIBBAM;
     }
-    
+
 }
